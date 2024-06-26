@@ -272,6 +272,10 @@ services:
     healthcheck:
       test: ['CMD', 'redis-cli', 'ping']
 
+networks:
+  traefik_proxy:
+    external: true
+
 volumes:
   minio:
     name: minio
